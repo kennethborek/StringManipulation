@@ -1,5 +1,6 @@
+# The following command introduces a specific module into the program being drafted.
 import sys
-
+#
 def main():
     # The following commands under the 'def readfile():' command will read the test.txt file.
     # The 'def readfile' function is defining what exactly will be executing in the proceeding commands.
@@ -24,26 +25,29 @@ def checkfile(essay):
     count=len(essay)
     # This statement establishes a range in which to iterate starting at zero and continuing to the conclusion.
     for a in range(0,count):
-        # This statement establishes the punctuation marks indicated in the statement is to be acknowledged by the program to conclude a sentence.
+        # This statement establishes that the punctuation marks, indicated in the statement, are to be acknowledged by the program to conclude a sentence.
         # This action will increment by 1 each iteration.
         if essay[a]=='.'or essay[a]==','or essay[a]=='!'or essay[a]==';':
             conclusionofsentence+=1
-    # This command splits
+    # This command breaks down the string into an array.
     words=essay.split()
+    # This command will display the result in the Run portion of the PyCharm Screen.
     print(words)
-
+    # This establishes a legitimate or valid word as an object.
     legitimatewords=0
+    # This establishes a sample or test word as an object.
     sampleword=0
+    # This establishes the variable 'b' as an object.
     b=0
+    # This statement establishes a loop in which to iterate the scan of the essay.
     for a in words:
         sampleword=words[b]
         sampleword=len(sampleword)
         if sampleword >=3:
            legitimatewords+=1
         b+=1
-
-
     numberwords=len(words)
+    # These commands will display the respective text and the values indicated outside of the double quotes within the Run portion of the PyCharm Screen with the appropriate text .
     print("The precise amount of words is equivalent to",len(words), "")
     print("")
     print("The complete amount of legitimate words is equivalent to", legitimatewords)
